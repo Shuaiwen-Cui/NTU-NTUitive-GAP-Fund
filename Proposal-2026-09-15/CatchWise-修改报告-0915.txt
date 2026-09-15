@@ -1,0 +1,108 @@
+# CatchWise 申请书 0915 版 — 修改报告
+
+**基准**：`NTUitive Gap Fund Application Form0915.docx`（同事修订版）
+**产出**：`NTUitive Gap Fund Application Form0915-rev.docx`
+**处理方式**：先**接受同事的全部修订**（202 处插入 / 167 处删除），在此基础上再以**修订模式**做本轮修改（作者标记 `Shuaiwen Cui`，共 11 处），原有 12 条批注全部保留。
+**版面**：接受全部修订后 **18 页**；执行摘要 **499 词**（上限 500）；§3.2 约 **4.9 页**（上限 6 页）。
+
+---
+
+## 一、同事修改中已全部采纳的部分
+
+- 全文语言精炼、表格排版整理、Table 3 表头统一（Alternative / Current use / Operating-point setting / Remaining gap / Retuning requirement）。
+- 第 4 章由 "Milestone / Gate" 改为 "Stage / Task / Milestone" 体系，月份改为 1-based（Stage 1: Months 1–6，Stage 2: 7–12，Stage 3: 13–18）。这一改动更清楚，全文已按此统一。
+- **取消三个月缓冲**（批注 #10）。已按此定稿，并检查了全文一致性（见下）。
+- Machine condition monitoring 的市场数字（USD 3.1bn 2024 → 4.7bn 2029）。经核实，同事的数字是对的，原稿的写法有误。
+
+---
+
+## 二、本轮修改（修订模式，共 11 处）
+
+### 1. Annex A 商业模式画布 — 结构修复（**未走修订标记**）
+
+修订版中画布的九宫格表格在编辑过程中被破坏：内容被拉平成「标签 / 正文」两列的线性表格，顺序错位（Key Resources 排到最前），并溢出到两页。Gap Fund 明确要求 "It is compulsory to fill in the Business Model Canvas"，线性清单不符合要求。
+
+已恢复为标准九宫格布局，**文字内容沿用修订版、未作改动**，恢复后回到一页。表格结构无法用修订标记表达，故此处为直接修复。
+
+### 2. 三个月缓冲取消后的全文一致性（核查 + 1 处修订）
+
+核查结果：`Months 0-6 / 6-12 / 12-18` 旧编号 0 处，`buffer` 仅剩 §3.2.4 的 "pre-trigger buffering"（技术术语，无关），`Month 15` 0 处，`contingency` 仅剩 M2 行中针对合作方延迟的那条（应保留）。§2.6 Timeline、第 4 章均已一致。
+
+唯一不一致在 **§5 Budget basis**，仍用旧的 0-based 月份。已改为 Months 1-6 / 7-12 / 13-18，并把 "follows the milestones of Section 4" 改为 "follows the stages of Section 4"，与新体系对齐。
+
+### 3. 执行摘要 — beta 加注释（§1 Proposed solution）
+
+修订版改为 "Once the event class and recall requirement are defined, the operator states **beta**"，但 beta 未作任何解释，而模板要求执行摘要使用 minimal technical terms。
+
+改为：
+
+> Once the event class is agreed, the operator states **beta — how much worse a missed event is than a false alarm** — and CatchWise optimises the remaining decision settings…
+
+保留 beta 这一术语（后文 §2、§3.2 都要用），同时给出一句话释义。删去与之并列的 "recall requirement"：召回下界是 §3.2 的**验收约束**，与 beta 不是同一层输入，并列出现会让读者以为要设两个参数。
+
+### 4. 市场数字 — 核对来源后修正（§2.2 TAM）
+
+逐条核对 MarketsandMarkets 原始发布：
+
+| 市场 | 稿中原值 | 核实值 | 处理 |
+|---|---|---|---|
+| Building automation | 101.7bn(2025) → 191.1bn(2030), 13.4% | **一致** | 保留 |
+| Structural health monitoring | 2.78 → 4.09bn over 2025-2029, 10.4%, APAC 13.1% | 官方口径为 **2.5bn(2024) → 4.1bn(2029), CAGR 10.4%** | **已修正**；未能核实的 "APAC 13.1%" 已删除 |
+| Machine condition monitoring | 3.1bn(2024) → 4.7bn(2029)（同事改动） | **一致**，CAGR 8.3% | 保留，**补上 CAGR** |
+
+修正理由：原 SHM 数值的起止年份与官方口径不符（10.4% 这个增长率对应的是 2024→2029，而非稿中的 2025→2029），三条数据现在口径一致、均可回溯到公开发布。同时把来源标注从 "(MarketsandMarkets, 2025-2026)" 简化为 "(MarketsandMarkets)"，因为三份报告的发布年份并不相同。
+
+### 5. Table 3 — 恢复三处被精炼掉的关键内容（3 处修订）
+
+表头与行标题的整理全部保留，仅恢复以下三格：
+
+| 位置 | 修订版 | 恢复为 | 理由 |
+|---|---|---|---|
+| Static threshold 行 / Current use | "BMS and industrial platforms; vendor AI tools" | "BMS and industrial platform analytics; vendor AI anomaly components (Honeywell, Siemens Industrial Edge, ABB, Schneider Electric)" | 竞品分析必须可核查。产品线名称此前已逐一核实（ABB Ability Digital Powertrain、Siemens SIMATIC Anomaly Detection 等均确有其事）。Technical Innovation 占评分 55%，泛指"vendor AI tools"会被视为功课不足 |
+| CatchWise 行 / Operating-point setting | "Optimises decision parameters on-device against the selected F-beta" | "Iterated on the device to the best achievable F-beta for the customer's beta, **then held**" | "迭代至最优后保持"是与上方五行"一次设定即固定"形成对照的核心卖点，改后这一对照消失 |
+| CatchWise 行 / Retuning requirement | "Automated local retuning; periodic re-characterisation where required" | "**None in the field**: the loop re-converges in place, with **no site visit and no data egress**" | 这是全表对比最锋利的一格。改后读起来像我们也需要定期维护，与上方各行的"要出车/要传数据/要重训"拉不开差距 |
+
+### 6. 里程碑验收口径 — 部分量化（批注 #512 / #528，3 处修订）
+
+批注建议把 Gate 写成含 [X]/[Y]/[Z] 的硬指标。考虑到指标值须与合作方共同商定、现在写死会在执行期形成风险，采取**"可度量但不写死绝对值"**的折中：
+
+- **M1**：改为「筛查结果**对照每一组事件—感知配对事先约定的可检测性判据**记录在案；验收标准与标注数据规程**签署确认**；引擎在受限运行时端到端运行且**满足定义阶段记录的内存与时延预算**」。三项均为可判定的客观事实，且不依赖尚未商定的数值。
+- **M2**：补充「估计器误差量化并**连同置信区间一并报告**」，并把"任何未达标须说明"明确为"对照约定判据的缺口须说明"。
+- **M3**：把"assessed against the predefined targets"明确为"对照 **M1 约定的判据与 M2 的基准基线**"，避免"predefined targets"无处指认。
+
+> 如果李老师坚持要绝对数值，建议只在 M1 填一个我们已有未发表结果可支撑的量（如估计器误差上界），其余仍保持"与合作方约定"的写法。此处可再议。
+
+### 7. false alarm / no-fault-found 术语（批注 #97，1 处修订）
+
+**不建议全文替换**。两者不是同义词：
+
+- **no-fault-found alarm** —— 派人去查、结果没有故障。只在楼宇/运维语境成立，是 §2.4 成本模型的计价对象。
+- **false alarm** —— 检测意义上的误报。在受限节点上根本不涉及派人（误触发的代价是唤醒、功耗、存储），§3.2 的检测性能论述必须用这个词。
+
+全文统一改成 no-fault-found 会让 §3.2 的技术表述失真。已改为**在成本模型处显式点明二者关系**：§2.4 该段标题由 "How the false-alarm figure is built" 改为 "**How the alarm-investigation cost is built**"，并在首句写明「此处主导成本是 no-fault-found alarm——经调查后确认并非故障的那一类」。其余各处按上述分工保持原样。
+
+### 8. Section 2.5 交叉引用（批注 #559，含在第 2 项修订内）
+
+§2.5 标题是 Competitors，但模板在该节的提示里同时要求说明 "what weaknesses there might be"，因此 Weaknesses and risks 段落**位置是正确的**。为避免读者按标题找不到，§5 中的引用由 "the main external risk in Section 2.5" 改为 "the main external risk **identified under Weaknesses and risks in** Section 2.5"。
+
+### 9. 执行摘要 Market need 段回收字数（1 处修订）
+
+加入 beta 释义后执行摘要为 503 词，超出 500 词上限。将修订版改写过的 Market need 第二、三句（38 词）压回 33 词，语义不变，现为 **499 词**。
+
+### 10. 第 4 章阶段标签排版（**未走修订标记**）
+
+`Stage 1: Months 1-` 与 `6` 被拆成两个段落、`Stage 2: Months 7- 12` 多一个空格，属于编辑过程中的残留。已整理为 `Stage 1: Months 1-6` / `Stage 2: Months 7-12` / `Stage 3: Months 13-18`。
+
+---
+
+## 三、仍待确认（黄色标记）
+
+1. 第 5 节全部金额，尤其 SRF 月薪 S$8,000 需按 NTU 现行薪级核定
+2. RG146/23 的资助期与金额
+3. 两位团队成员的邮箱
+4. Annex A 画布中：合作方具体名称及披露许可、LOI/支持信状态、具体渠道伙伴
+
+## 四、建议再议的两点
+
+1. **里程碑是否填绝对数值**（见第 6 项）
+2. **M3 的工作量**：取消缓冲后，Stage 3 同时承担现场试点、跨工况重复基准、稳定性与可迁移性验证、未达标部件的 refine、集成指南与 DfM 评审、路线比较。这些活动本身都合理，但集中在 6 个月内且不再有任何余量。若要保留"排满"的观感又留余地，可把**交付物的验收点仍定在第 15 个月**，后三个月只做巩固与扩展验证、不产生新的必交交付物——对外看仍是满档，对内保留 3 个月缓冲。
